@@ -33,10 +33,9 @@ jobs:
                 dotnet publish urbancompany.csproj -c Release -o publish
             - name: show repo structure
               run: |
-                ls -laR
+                ls -R
             - name: deploy to azure
               uses: azure/webapps-deploy@v2
               with:
                 app-name: ucwebapp1225
-                package: publish
-            
+                package: urbancompany/urbancompany/publish
