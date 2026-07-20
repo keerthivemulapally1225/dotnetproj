@@ -11,14 +11,14 @@ jobs:
               uses: azure/login@v1
               with:
                 creds: ${{ secrets.AZURE_SECRET }}
-            - name: setup terraform
-              uses: hashicorp/setup-terraform@v3
-            - name: terraform init
-              working-directory: Terraform
-              run: terraform init
-            - name: terraform apply
-              working-directory: Terraform
-              run: terraform apply -auto-approve
+            # - name: setup terraform
+            #   uses: hashicorp/setup-terraform@v3
+            # - name: terraform init
+            #   working-directory: Terraform
+            #   run: terraform init
+            # - name: terraform apply
+            #   working-directory: Terraform
+            #   run: terraform apply -auto-approve
             - name: setup dotnet
               uses: actions/setup-dotnet@v6
               with:
