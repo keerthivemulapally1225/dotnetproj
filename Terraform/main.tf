@@ -35,3 +35,5 @@ resource "azurerm_windows_web_app" "webapp" {
         }
     }
 }
+
+#az ad sp create-for-rbac --name "ucapp" --role contributor --scopes /subscriptions/3e404248-4d3e-4710-9c66-5c6892ddae93 --sdk-auth
