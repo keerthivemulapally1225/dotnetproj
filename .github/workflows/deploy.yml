@@ -29,8 +29,8 @@ jobs:
                 dotnet restore
             - name: publish
               run: |
-                cd urbancompany
-                dotnet publish -c Release -o publish
+                cd urbancompany/urbancompany
+                dotnet publish urbancompany.csproj -c Release -o publish
             - name: deploy to azure
               uses: azure/webapps-deploy@v2
               with:
