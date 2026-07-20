@@ -31,6 +31,9 @@ jobs:
               run: |
                 cd urbancompany/urbancompany
                 dotnet publish urbancompany.csproj -c Release -o publish
+            - name: show repo structure
+              run: |
+                ls -laR
             - name: deploy to azure
               uses: azure/webapps-deploy@v2
               with:
